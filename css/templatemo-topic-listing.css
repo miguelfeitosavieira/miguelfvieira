@@ -399,7 +399,11 @@ strong {
 }
 
 .navbar-icon {
-  background: var(--white-color);
+  background: var(--white-color);background-image: url('../images/colleagues-working-cozy-office-medium-shot.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
   border-radius: var(--border-radius-large);
   display: inline-block;
   font-size: var(--h5-font-size);
@@ -722,6 +726,8 @@ blockquote {
 }
 
 
+
+
 /*---------------------------------------
   TIMELINE              
 -----------------------------------------*/
@@ -824,8 +830,6 @@ blockquote {
 .timeline-container .vertical-scrollable-timeline li.active .icon-holder::before {
   background-color: var(--primary-color);
 }
-
-
 /*---------------------------------------
   FAQs              
 -----------------------------------------*/
@@ -1071,6 +1075,26 @@ blockquote {
     padding-bottom: 50px;
   }
   
+  .explore-section {
+
+  }
+
+  .col-12 text-center {
+
+  }
+
+  .col-lg-10 col-12 mx-auto {
+
+  }
+
+  .col-lg-6 col-12 {
+
+  }
+
+  .col-lg-6 col-12 m-auto {
+    
+  }
+
   .navbar {
     background-color: var(--secondary-color);
   }
