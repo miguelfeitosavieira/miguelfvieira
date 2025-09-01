@@ -55,6 +55,7 @@ body {
   TYPOGRAPHY               
 -----------------------------------------*/
 
+
 h2,
 h3,
 h4,
@@ -76,6 +77,12 @@ h6 {
 h1 {
   font-size: var(--h1-font-size);
   font-weight: var(--font-weight-bold);
+}
+
+.explore-section .row {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
 }
 
 h2 {
