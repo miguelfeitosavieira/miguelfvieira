@@ -3,11 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Loja de Games</title>
+  <title>GameZone</title>
   <link rel="stylesheet" href="estilo.css" />
 </head>
 <body>
 
+  <!-- Idiomas -->
+  <nav class="idiomas">
+    <button>🇧🇷 Português</button>
+    <button>🇺🇸 English</button>
+    <button>🇪🇸 Español</button>
+  </nav>
+
+  <!-- Hero -->
   <header class="hero">
     <h1>🎮 Bem-vindo à GameZone</h1>
     <p>Explore o universo dos games com estilo!</p>
@@ -15,111 +23,57 @@
 
   <main class="container">
 
-    <!-- Plataforma: Xbox -->
+    <!-- Xbox -->
     <section class="plataforma xbox">
       <h2>Xbox</h2>
-      <div class="tabs">
-        <button class="tab active" data-target="xbox-series">Jogos Xbox Series X|S</button>
-        <button class="tab" data-target="xbox-one">Jogos Xbox One</button>
-        <button class="tab" data-target="xbox-assinaturas">Assinaturas</button>
-        <button class="tab" data-target="xbox-saldo">Saldo</button>
-        <button class="tab" data-target="xbox-obs">Observações</button>
-      </div>
-      <div class="tab-content active" id="xbox-series">
-        <p>Halo Infinite, Forza Horizon 5, Starfield...</p>
-      </div>
-      <div class="tab-content" id="xbox-one">
-        <p>Gears 5, Sunset Overdrive, Ori and the Blind Forest...</p>
-      </div>
-      <div class="tab-content" id="xbox-assinaturas">
-        <p>Game Pass Ultimate, Core, PC...</p>
-      </div>
-      <div class="tab-content" id="xbox-saldo">
-        <p>Gift Cards: R$50, R$100, R$200</p>
-      </div>
-      <div class="tab-content" id="xbox-obs">
-        <p>Jogos retrocompatíveis disponíveis para ambas as gerações.</p>
+      <div class="botoes">
+        <button>Jogos Nova Geração</button>
+        <button>Jogos Antiga Geração</button>
+        <button>Assinaturas</button>
+        <button>Saldo R$50</button>
+        <button>Saldo R$100</button>
+        <button>Saldo R$200</button>
       </div>
     </section>
 
-    <!-- Plataforma: PlayStation -->
+    <!-- PlayStation -->
     <section class="plataforma playstation">
       <h2>PlayStation</h2>
-      <div class="tabs">
-        <button class="tab active" data-target="ps5">Jogos PS5</button>
-        <button class="tab" data-target="ps4">Jogos PS4</button>
-        <button class="tab" data-target="ps-assinaturas">Assinaturas</button>
-        <button class="tab" data-target="ps-saldo">Saldo</button>
-        <button class="tab" data-target="ps-obs">Observações</button>
-      </div>
-      <div class="tab-content active" id="ps5">
-        <p>Spider-Man 2, God of War Ragnarök, Horizon Forbidden West...</p>
-      </div>
-      <div class="tab-content" id="ps4">
-        <p>The Last of Us, Ghost of Tsushima, Bloodborne...</p>
-      </div>
-      <div class="tab-content" id="ps-assinaturas">
-        <p>PlayStation Plus Essential, Extra, Deluxe</p>
-      </div>
-      <div class="tab-content" id="ps-saldo">
-        <p>Gift Cards: R$50, R$100, R$250</p>
-      </div>
-      <div class="tab-content" id="ps-obs">
-        <p>Jogos PS4 compatíveis com PS5 via retrocompatibilidade.</p>
+      <div class="botoes">
+        <button>Jogos PS5</button>
+        <button>Jogos PS4</button>
+        <button>Assinaturas</button>
+        <button>Saldo R$50</button>
+        <button>Saldo R$100</button>
+        <button>Saldo R$250</button>
       </div>
     </section>
 
-    <!-- Plataforma: Nintendo -->
+    <!-- Nintendo -->
     <section class="plataforma nintendo">
       <h2>Nintendo</h2>
-      <div class="tabs">
-        <button class="tab active" data-target="switch2">Jogos Nintendo Switch 2</button>
-        <button class="tab" data-target="switch1">Jogos Nintendo Switch 1</button>
-        <button class="tab" data-target="nintendo-assinaturas">Assinaturas</button>
-        <button class="tab" data-target="nintendo-saldo">Saldo</button>
-        <button class="tab" data-target="nintendo-obs">Observações</button>
+      <div class="botoes">
+        <button>Jogos Switch 2</button>
+        <button>Jogos Switch 1</button>
+        <button>Assinaturas</button>
+        <button>Saldo R$50</button>
+        <button>Saldo R$100</button>
+        <button>Saldo R$200</button>
       </div>
-      <div class="tab-content active" id="switch2">
-        <p>Zelda: Echoes of Hyrule, Mario Galaxy 3...</p>
-      </div>
-      <div class="tab-content" id="switch1">
-        <p>Mario Kart 8 Deluxe, Animal Crossing, Zelda: BOTW...</p>
-      </div>
-      <div class="tab-content" id="nintendo-assinaturas">
-        <p>Nintendo Switch Online, Expansion Pack</p>
-      </div>
-      <div class="tab-content" id="nintendo-saldo">
-        <p>Gift Cards: R$50, R$100, R$200</p>
-      </div>
-      <div class="tab-content" id="nintendo-obs">
-        <p>Jogos físicos e digitais disponíveis na loja oficial.</p>
-      </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="contato">
+      <h2>📞 Contato</h2>
+      <ul>
+        <li><strong>Email:</strong> contato@gamezone.com.br</li>
+        <li><strong>Telefone:</strong> (41) 3333-4444</li>
+        <li><strong>WhatsApp:</strong> (41) 98888-7777</li>
+        <li><strong>Endereço:</strong> Av. dos Games, 123 - Curitiba, PR</li>
+      </ul>
     </section>
 
   </main>
 
-  <script>
-    const tabs = document.querySelectorAll('.tab');
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        const parent = tab.closest('.plataforma');
-        parent.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-        parent.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-        tab.classList.add('active');
-        parent.querySelector(`#${tab.dataset.target}`).classList.add('active');
-      });
-    });
-  </script>
-
-
-
-
-        <!-- JAVASCRIPT FILES -->
-        <script src="js/jquery.min.js"></script>
-        <script src="js/bootstrap.bundle.min.js"></script>
-        <script src="js/jquery.sticky.js"></script>
-        <script src="js/click-scroll.js"></script>
-        <script src="js/custom.js"></script>
-
-    </body>
+</body>
 </html>

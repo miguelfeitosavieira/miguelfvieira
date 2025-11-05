@@ -1,3 +1,4 @@
+
 /*
 
 TemplateMo 590 topic listing
@@ -16,6 +17,22 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #f4f4f4;
   color: #333;
+}
+
+.idiomas {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 10px 20px;
+  background-color: #eee;
+}
+
+.idiomas button {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 .hero {
@@ -44,36 +61,25 @@ body {
   font-size: 1.8rem;
 }
 
-.tabs {
+.botoes {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 20px;
 }
 
-.tab {
-  padding: 10px 20px;
+.botoes button {
+  background-color: #ff6f00;
+  color: white;
   border: none;
-  background-color: #ddd;
+  padding: 10px 15px;
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
-  transition: background 0.3s;
+  transition: background 0.3s ease;
 }
 
-.tab.active {
-  background-color: #ff6f00;
-  color: white;
-}
-
-.tab-content {
-  display: none;
-  padding: 15px;
-  border-top: 1px solid #ccc;
-}
-
-.tab-content.active {
-  display: block;
+.botoes button:hover {
+  background-color: #e65c00;
 }
 
 /* Cores por plataforma */
@@ -81,8 +87,29 @@ body {
 .playstation h2 { color: #003087; }
 .nintendo h2 { color: #e60012; }
 
+.contato {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.contato h2 {
+  margin-bottom: 20px;
+}
+
+.contato ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contato li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
 @media (max-width: 600px) {
-  .tabs {
+  .botoes {
     flex-direction: column;
   }
 }
