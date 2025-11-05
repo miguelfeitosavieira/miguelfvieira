@@ -217,15 +217,6 @@ h1 {
   font-weight: var(--font-weight-bold);
 }
 
-.explore-section .row {
-  display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
-
-/*
-
-}
-
 
 
 h2 {
