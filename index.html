@@ -26,40 +26,52 @@
     <!-- Xbox -->
     <section class="plataforma xbox">
       <h2>Xbox</h2>
-      <div class="botoes">
-        <button>Jogos Xbox Series X|S</button>
-        <button>Jogos Xbox One</button>
-        <button>Assinaturas</button>
-        <button>Saldo R$50</button>
-        <button>Saldo R$100</button>
-        <button>Saldo R$200</button>
+      <div class="tabs">
+        <button class="tab active" data-target="xbox1">Jogos Xbox Series X|S</button>
+        <button class="tab" data-target="xbox2">Jogos Xbox One</button>
+        <button class="tab" data-target="xbox3">Assinaturas</button>
+        <button class="tab" data-target="xbox4">Saldo</button>
+        <button class="tab" data-target="xbox5">Observações</button>
       </div>
+      <div class="tab-content active" id="xbox1"><p>Halo Infinite, Forza Horizon 5, Starfield...</p></div>
+      <div class="tab-content" id="xbox2"><p>Gears 5, Ori and the Blind Forest...</p></div>
+      <div class="tab-content" id="xbox3"><p>Game Pass Ultimate, Core, PC...</p></div>
+      <div class="tab-content" id="xbox4"><p>Gift Cards: R$50, R$100, R$200</p></div>
+      <div class="tab-content" id="xbox5"><p>Jogos retrocompatíveis disponíveis para ambas as gerações.</p></div>
     </section>
 
     <!-- PlayStation -->
     <section class="plataforma playstation">
       <h2>PlayStation</h2>
-      <div class="botoes">
-        <button>Jogos PS5</button>
-        <button>Jogos PS4</button>
-        <button>Assinaturas</button>
-        <button>Saldo R$50</button>
-        <button>Saldo R$100</button>
-        <button>Saldo R$250</button>
+      <div class="tabs">
+        <button class="tab active" data-target="ps1">Jogos PS5</button>
+        <button class="tab" data-target="ps2">Jogos PS4</button>
+        <button class="tab" data-target="ps3">Assinaturas</button>
+        <button class="tab" data-target="ps4">Saldo</button>
+        <button class="tab" data-target="ps5">Observações</button>
       </div>
+      <div class="tab-content active" id="ps1"><p>Spider-Man 2, God of War Ragnarök...</p></div>
+      <div class="tab-content" id="ps2"><p>The Last of Us, Ghost of Tsushima...</p></div>
+      <div class="tab-content" id="ps3"><p>PlayStation Plus Essential, Extra, Deluxe</p></div>
+      <div class="tab-content" id="ps4"><p>Gift Cards: R$50, R$100, R$250</p></div>
+      <div class="tab-content" id="ps5"><p>Jogos PS4 compatíveis com PS5 via retrocompatibilidade.</p></div>
     </section>
 
     <!-- Nintendo -->
     <section class="plataforma nintendo">
       <h2>Nintendo</h2>
-      <div class="botoes">
-        <button>Jogos Switch 2</button>
-        <button>Jogos Switch 1</button>
-        <button>Assinaturas</button>
-        <button>Saldo R$50</button>
-        <button>Saldo R$100</button>
-        <button>Saldo R$200</button>
+      <div class="tabs">
+        <button class="tab active" data-target="nt1">Jogos Switch 2</button>
+        <button class="tab" data-target="nt2">Jogos Switch 1</button>
+        <button class="tab" data-target="nt3">Assinaturas</button>
+        <button class="tab" data-target="nt4">Saldo</button>
+        <button class="tab" data-target="nt5">Observações</button>
       </div>
+      <div class="tab-content active" id="nt1"><p>Zelda: Echoes of Hyrule, Mario Galaxy 3...</p></div>
+      <div class="tab-content" id="nt2"><p>Mario Kart 8 Deluxe, Animal Crossing...</p></div>
+      <div class="tab-content" id="nt3"><p>Nintendo Switch Online, Expansion Pack</p></div>
+      <div class="tab-content" id="nt4"><p>Gift Cards: R$50, R$100, R$200</p></div>
+      <div class="tab-content" id="nt5"><p>Jogos físicos e digitais disponíveis na loja oficial.</p></div>
     </section>
 
     <!-- Contato -->
@@ -74,6 +86,23 @@
     </section>
 
   </main>
+
+  <!-- Script para abas -->
+  <script>
+    document.querySelectorAll('.plataforma').forEach(section => {
+      const tabs = section.querySelectorAll('.tab');
+      const contents = section.querySelectorAll('.tab-content');
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(t => t.classList.remove('active'));
+          contents.forEach(c => c.classList.remove('active'));
+          tab.classList.add('active');
+          section.querySelector(`#${tab.dataset.target}`).classList.add('active');
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>
