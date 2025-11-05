@@ -11,156 +11,79 @@ https://templatemo.com/tm-590-topic-listing
 -----------------------------------------*/
 
 
-/* === HERO SECTION === */
-.hero-section {
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.hero {
   background: linear-gradient(to right, #1e3c72, #2a5298);
-  min-height: 100vh;
-  padding: 60px 0;
-  color: #fff;
+  color: white;
+  padding: 60px 20px;
   text-align: center;
 }
 
-.hero-section h1 {
-  font-size: 3rem;
-  font-weight: bold;
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-.hero-section h6 {
-  font-size: 1.2rem;
-  margin-top: 10px;
-  color: #f0f0f0;
-}
-
-.custom-form .input-group {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.custom-form .form-control {
-  border-radius: 0;
-}
-
-.custom-form button {
-  background-color: #ff6f00;
-  color: #fff;
-  border: none;
-  transition: background 0.3s ease;
-}
-
-.custom-form button:hover {
-  background-color: #e65c00;
-}
-
-/* === FEATURED SECTION === */
-.featured-section {
-  background-color: #f8f9fa;
-  padding: 60px 0;
-}
-
-.custom-block {
+.plataforma {
+  background: white;
+  border-radius: 10px;
   padding: 30px;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.custom-block:hover {
-  transform: translateY(-5px);
+.plataforma h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
 }
 
-.custom-block-overlay {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
-.custom-block-image {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-.custom-block-overlay-text {
-  position: absolute;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 20px;
-  width: 100%;
-  color: #fff;
-}
-
-.custom-btn {
-  background-color: #ff6f00;
-  color: #fff;
-  border: none;
+.tab {
   padding: 10px 20px;
-  text-decoration: none;
-  display: inline-block;
-  border-radius: 5px;
-  transition: background 0.3s ease;
-}
-
-.custom-btn:hover {
-  background-color: #e65c00;
-}
-
-/* === TABS SECTION === */
-.nav-tabs .nav-link {
   border: none;
+  background-color: #ddd;
+  border-radius: 5px;
+  cursor: pointer;
   font-weight: bold;
-  color: #555;
+  transition: background 0.3s;
 }
 
-.nav-tabs .nav-link.active {
+.tab.active {
   background-color: #ff6f00;
-  color: #fff;
-  border-radius: 5px;
+  color: white;
 }
 
-.tab-content .card {
-  background-color: #fff;
-  border-radius: 10px;
-  transition: box-shadow 0.3s ease;
+.tab-content {
+  display: none;
+  padding: 15px;
+  border-top: 1px solid #ccc;
 }
 
-.tab-content .card:hover {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+.tab-content.active {
+  display: block;
 }
 
-/* === CONTATO SECTION === */
-#section_5 {
-  background-color: #fefefe;
-  padding: 60px 0;
-}
+/* Cores por plataforma */
+.xbox h2 { color: #107c10; }
+.playstation h2 { color: #003087; }
+.nintendo h2 { color: #e60012; }
 
-#section_5 .form-control {
-  border-radius: 5px;
-}
-
-#section_5 .btn-warning {
-  font-weight: bold;
-  padding: 12px;
-  border-radius: 5px;
-  transition: background 0.3s ease;
-}
-
-#section_5 .btn-warning:hover {
-  background-color: #e0a800;
-}
-
-/* === RESPONSIVO === */
-@media (max-width: 768px) {
-  .hero-section h1 {
-    font-size: 2.2rem;
-  }
-
-  .custom-form .input-group {
+@media (max-width: 600px) {
+  .tabs {
     flex-direction: column;
-  }
-
-  .custom-form .form-control,
-  .custom-form button {
-    width: 100%;
-    margin-bottom: 10px;
   }
 }
 

@@ -1,426 +1,115 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <meta name="description" content="">
-        <meta name="author" content="">
-
-        <title>Lojas Quero Jogar</title>
-
-        <!-- CSS FILES -->        
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
-                        
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-
-        <link href="css/bootstrap-icons.css" rel="stylesheet">
-
-        <link href="css/templatemo-topic-listing.css" rel="stylesheet">      
-<!--
-
-TemplateMo 590 topic listing
-
-https://templatemo.com/tm-590-topic-listing
-
--->
-
-    <!-- Bootstrap 5 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
- <style>
-    body {
-      background-color: #f8f9fa;
-      font-family: 'Segoe UI', sans-serif;
-    }
-
-    /* ------ Layout geral ------ */
-    .explore-section {
-      padding: 60px 0;
-    }
-
-    .explore-section h2 {
-      font-weight: bold;
-      margin-bottom: 1rem;
-    }
-
-    .nav-tabs .nav-link.active {
-      background-color: #0d6efd;
-      color: #fff !important;
-    }
-
-    .nav-tabs .nav-link {
-      color: #0d6efd;
-    }
-
-    /* ------ Cards ------ */
-    .custom-block {
-      border-radius: 20px;
-      overflow: hidden;
-      background: #fff;
-      padding: 20px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      height: 100%;
-    }
-
-    .custom-block:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    .custom-block img {
-      border-radius: 12px;
-      margin-top: 10px;
-    }
-
-    /* ------ Tabs fixas ------ */
-    .tab-content {
-      min-height: 420px; /* impede que o conteúdo suba/abaixe */
-      position: relative;
-    }
-
-    .tab-pane {
-      transition: opacity 0.4s ease;
-    }
-
-    /* ------ Navbar ------ */
-    .navbar {
-      background-color: #6ccfc9;
-    }
-
-    .navbar-brand {
-      font-weight: bold;
-      font-size: 1.2rem;
-    }
-
-    .navbar-nav .nav-link {
-      color: #000 !important;
-      font-weight: 500;
-    }
-
-    .navbar-nav .nav-link:hover {
-      color: #fff !important;
-    }
-    /* Ajuste visual e espaçamento */
-.card-loja .card {
-  border-radius: 15px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card-loja .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-}
-
-.nav-tabs .nav-link {
-  color: #555;
-  border: none;
-}
-
-.nav-tabs .nav-link.active {
-  background-color: #0d6efd;
-  color: #fff !important;
-  border-radius: 8px;
-}
-
-.tab-content {
-  min-height: 300px;
-  transition: opacity 0.4s ease;
-}
-
-section h2 {
-  font-size: 1.8rem;
-}
-
-hr {
-  opacity: 0.15;
-}
-  </style>
-
-    </head>
-    
-    <body id="top">
-
-        <main>
-
-            <nav class="navbar navbar-expand-lg">
-                <div class="container">
-                    <a class="navbar-brand" href="index.html">
-                        <i class="bi-back"></i>
-                        <span>Lojas Quero Jogar</span>
-                    </a>
-
-                    <div class="d-lg-none ms-auto me-4">
-                        <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
-                    </div>
-    
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-    
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ms-lg-5 me-lg-auto">
-                            <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_1">Início</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_2">PlayStation</a>
-                            </li>
-    
-                            <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_3">Xbox</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_4">Nintendo</a>
-                            </li>
-    
-                            <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_5">Contato</a>
-                            </li>
-
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Sobre nós</a>
-
-                                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="topics-listing.html">A nossa história</a></li>
-
-                                    <li><a class="dropdown-item" href="contact.html">Quem somos</a></li>
-
-                                    
-                                </ul>
-                            </li>
-                        </ul>
-
-                        <div class="d-none d-lg-block">
-                            <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-            
-
-            <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-8 col-12 mx-auto">
-                            <h1 class="text-white text-center">Bem vindo ao nosso site</h1>
-
-                            <h6 class="text-center">Aqui a realidade é você se divertir</h6>
-
-                            <form method="get" class="custom-form mt-4 pt-2 mb-lg-0 mb-5" role="search">
-                                <div class="input-group input-group-lg">
-                                    <span class="input-group-text bi-search" id="basic-addon1">
-                                        
-                                    </span>
-
-                                    <input name="keyword" type="search" class="form-control" id="keyword" placeholder="Pesquisar jogos..." aria-label="Search">
-
-                                    <button type="submit" class="form-control">Pesquisar</button>
-                                </div>
-                            </form>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-
-            <section class="featured-section">
-                <div class="container">
-                    <div class="row justify-content-center">
-
-                        <div class="col-lg-4 col-12 mb-4 mb-lg-0">
-                            <div class="custom-block bg-white shadow-lg">
-                                <a href="topics-detail.html">
-                                    <div class="d-flex">
-                                        <div>
-                                            <h5 class="mb-2">Destaques de produtos</h5>
-
-                                            <p class="mb-0">Confira nossos destaques</p>
-                                        </div>
-
-                                        
-                                    </div>
-
-                                    
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 col-12">
-                            <div class="custom-block custom-block-overlay">
-                                <div class="d-flex flex-column h-100">
-                                    <img src="images/businesswoman-using-tablet-analysis.jpg" class="custom-block-image img-fluid" alt="">
-
-                                    <div class="custom-block-overlay-text d-flex">
-                                        <div>
-                                            <h5 class="text-white mb-2">Promoções</h5>
-
-                                            <p class="text-white">Confira nossas promoções</p>
-
-                                            <a href="topics-detail.html" class="btn custom-btn mt-2 mt-lg-3">Ver agora</a>
-                                        </div>
-
-                                        
-                                    </div>
-
-                                    
-                                    
-                                    
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-
-
-
-  
-<!-- ======== ÁREA PRINCIPAL DAS LOJAS ======== -->
-<div class="container my-5">
-
-  <!-- PLAYSTATION -->
-  <section id="section_2" class="my-5">
-    <h2 class="text-center fw-bold mb-4 text-primary">PlayStation</h2>
-    <ul class="nav nav-tabs justify-content-center mb-4" id="psTabs" role="tablist">
-      <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#ps-jogos">Jogos</a></li>
-      <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#ps-assinaturas">Assinaturas</a></li>
-      <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#ps-saldo">Saldo</a></li>
-      <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#ps-destaques">Destaques</a></li>
-    </ul>
-
-    <div class="tab-content">
-      <!-- Jogos -->
-      <div class="tab-pane fade show active" id="ps-jogos">
-        <div class="row g-4 justify-content-center">
-          <div class="col-md-3">
-            <div class="card p-3 shadow-sm border-0 text-center">
-              <h5 class="fw-bold">God of War: Ragnarök</h5>
-              <p>#KratosOn</p>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card p-3 shadow-sm border-0 text-center">
-              <h5 class="fw-bold">Spider-Man 2</h5>
-              <p>Sejam melhores juntos.</p>
-            </div>
-          </div>
-        </div>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Loja de Games</title>
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+
+  <header class="hero">
+    <h1>🎮 Bem-vindo à GameZone</h1>
+    <p>Explore o universo dos games com estilo!</p>
+  </header>
+
+  <main class="container">
+
+    <!-- Plataforma: Xbox -->
+    <section class="plataforma xbox">
+      <h2>Xbox</h2>
+      <div class="tabs">
+        <button class="tab active" data-target="xbox-series">Jogos Xbox Series X|S</button>
+        <button class="tab" data-target="xbox-one">Jogos Xbox One</button>
+        <button class="tab" data-target="xbox-assinaturas">Assinaturas</button>
+        <button class="tab" data-target="xbox-saldo">Saldo</button>
+        <button class="tab" data-target="xbox-obs">Observações</button>
       </div>
-
-      <!-- Assinaturas -->
-      <div class="tab-pane fade" id="ps-assinaturas">
-        <p class="text-center">PlayStation Plus Essential, Extra e Deluxe disponíveis.</p>
+      <div class="tab-content active" id="xbox-series">
+        <p>Halo Infinite, Forza Horizon 5, Starfield...</p>
       </div>
-
-      <!-- Saldo -->
-      <div class="tab-pane fade" id="ps-saldo">
-        <p class="text-center">Gift Cards: R$50, R$100, R$250.</p>
+      <div class="tab-content" id="xbox-one">
+        <p>Gears 5, Sunset Overdrive, Ori and the Blind Forest...</p>
       </div>
-
-      <!-- Destaques -->
-      <div class="tab-pane fade" id="ps-destaques">
-        <p class="text-center">Ofertas especiais na PS Store esta semana!</p>
+      <div class="tab-content" id="xbox-assinaturas">
+        <p>Game Pass Ultimate, Core, PC...</p>
       </div>
-    </div>
-  </section>
-
-  <!-- XBOX -->
-  <section id="section_3" class="my-5">
-    <h2 class="text-center fw-bold mb-4 text-success">Xbox</h2>
-    <ul class="nav nav-tabs justify-content-center mb-4" id="xboxTabs" role="tablist">
-      <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#xbox-jogos">Jogos</a></li>
-      <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#xbox-assinaturas">Assinaturas</a></li>
-      <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#xbox-saldo">Saldo</a></li>
-    </ul>
-
-    <div class="tab-content">
-      <!-- Jogos -->
-      <div class="tab-pane fade show active" id="xbox-jogos">
-        <div class="row g-4 justify-content-center">
-          <div class="col-md-3"><div class="card p-3 shadow-sm border-0 text-center"><h5>Halo Infinite</h5><p>O retorno do Master Chief.</p></div></div>
-          <div class="col-md-3"><div class="card p-3 shadow-sm border-0 text-center"><h5>Forza Horizon 5</h5><p>Explore o México em alta velocidade.</p></div></div>
-        </div>
+      <div class="tab-content" id="xbox-saldo">
+        <p>Gift Cards: R$50, R$100, R$200</p>
       </div>
-
-      <!-- Assinaturas -->
-      <div class="tab-pane fade" id="xbox-assinaturas">
-        <p class="text-center">Game Pass Essential, Premium e Ultimate.</p>
+      <div class="tab-content" id="xbox-obs">
+        <p>Jogos retrocompatíveis disponíveis para ambas as gerações.</p>
       </div>
+    </section>
 
-      <!-- Saldo -->
-      <div class="tab-pane fade" id="xbox-saldo">
-        <p class="text-center">Gift Cards: R$50, R$100, R$200.</p>
+    <!-- Plataforma: PlayStation -->
+    <section class="plataforma playstation">
+      <h2>PlayStation</h2>
+      <div class="tabs">
+        <button class="tab active" data-target="ps5">Jogos PS5</button>
+        <button class="tab" data-target="ps4">Jogos PS4</button>
+        <button class="tab" data-target="ps-assinaturas">Assinaturas</button>
+        <button class="tab" data-target="ps-saldo">Saldo</button>
+        <button class="tab" data-target="ps-obs">Observações</button>
       </div>
-    </div>
-  </section>
-
-  <!-- NINTENDO -->
-  <section id="section_4" class="my-5">
-    <h2 class="text-center fw-bold mb-4 text-danger">Nintendo</h2>
-    <ul class="nav nav-tabs justify-content-center mb-4" id="nintendoTabs" role="tablist">
-      <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#nintendo-jogos">Jogos</a></li>
-      <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#nintendo-assinaturas">Assinaturas</a></li>
-      <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#nintendo-saldo">Saldo</a></li>
-    </ul>
-
-    <div class="tab-content">
-      <!-- Jogos -->
-      <div class="tab-pane fade show active" id="nintendo-jogos">
-        <div class="row g-4 justify-content-center">
-          <div class="col-md-3"><div class="card p-3 shadow-sm border-0 text-center"><h5>Zelda: Tears of the Kingdom</h5><p>A jornada continua em Hyrule.</p></div></div>
-          <div class="col-md-3"><div class="card p-3 shadow-sm border-0 text-center"><h5>Super Mario Bros. Wonder</h5><p>Um novo mundo de diversão.</p></div></div>
-        </div>
+      <div class="tab-content active" id="ps5">
+        <p>Spider-Man 2, God of War Ragnarök, Horizon Forbidden West...</p>
       </div>
-
-      <!-- Assinaturas -->
-      <div class="tab-pane fade" id="nintendo-assinaturas">
-        <p class="text-center">Nintendo Switch Online e Expansion Pack.</p>
+      <div class="tab-content" id="ps4">
+        <p>The Last of Us, Ghost of Tsushima, Bloodborne...</p>
       </div>
-
-      <!-- Saldo -->
-      <div class="tab-pane fade" id="nintendo-saldo">
-        <p class="text-center">Gift Cards: R$50, R$100, R$200.</p>
+      <div class="tab-content" id="ps-assinaturas">
+        <p>PlayStation Plus Essential, Extra, Deluxe</p>
       </div>
-    </div>
-  </section>
-
-  <!-- CONTATO -->
-  <section id="section_5" class="my-5">
-    <h2 class="text-center fw-bold mb-4 text-warning">Contato</h2>
-    <div class="row justify-content-center">
-      <div class="col-md-6">
-        <form>
-          <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="nome" placeholder="Nome">
-            <label for="nome">Nome</label>
-          </div>
-          <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="email" placeholder="Email">
-            <label for="email">Email</label>
-          </div>
-          <div class="form-floating mb-3">
-            <textarea class="form-control" id="mensagem" placeholder="Mensagem" style="height:120px"></textarea>
-            <label for="mensagem">Mensagem</label>
-          </div>
-          <button type="submit" class="btn btn-warning w-100">Enviar</button>
-        </form>
+      <div class="tab-content" id="ps-saldo">
+        <p>Gift Cards: R$50, R$100, R$250</p>
       </div>
-    </div>
-  </section>
+      <div class="tab-content" id="ps-obs">
+        <p>Jogos PS4 compatíveis com PS5 via retrocompatibilidade.</p>
+      </div>
+    </section>
 
-</div>
+    <!-- Plataforma: Nintendo -->
+    <section class="plataforma nintendo">
+      <h2>Nintendo</h2>
+      <div class="tabs">
+        <button class="tab active" data-target="switch2">Jogos Nintendo Switch 2</button>
+        <button class="tab" data-target="switch1">Jogos Nintendo Switch 1</button>
+        <button class="tab" data-target="nintendo-assinaturas">Assinaturas</button>
+        <button class="tab" data-target="nintendo-saldo">Saldo</button>
+        <button class="tab" data-target="nintendo-obs">Observações</button>
+      </div>
+      <div class="tab-content active" id="switch2">
+        <p>Zelda: Echoes of Hyrule, Mario Galaxy 3...</p>
+      </div>
+      <div class="tab-content" id="switch1">
+        <p>Mario Kart 8 Deluxe, Animal Crossing, Zelda: BOTW...</p>
+      </div>
+      <div class="tab-content" id="nintendo-assinaturas">
+        <p>Nintendo Switch Online, Expansion Pack</p>
+      </div>
+      <div class="tab-content" id="nintendo-saldo">
+        <p>Gift Cards: R$50, R$100, R$200</p>
+      </div>
+      <div class="tab-content" id="nintendo-obs">
+        <p>Jogos físicos e digitais disponíveis na loja oficial.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const parent = tab.closest('.plataforma');
+        parent.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        parent.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        tab.classList.add('active');
+        parent.querySelector(`#${tab.dataset.target}`).classList.add('active');
+      });
+    });
+  </script>
 
 
 
